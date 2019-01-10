@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-
-
-import Foundation
-
-
-public class Cache  {
-
-
-    var id: Int
-    var lat: Double
-    var lon: Double
-    var type: Int
-	var difficulty: Int
-    var terrain: Int
-    var size: Int
-	var owner: Int
-	var hint: String
-	var description: String
-    
-    init() {
-		id = ?
-		lat = ?
-		lon = ? 
-		type = ?
-		difficulty = ?
-		terrain = ?
-		size = ?
-		owner = ?
-		hint = "?"
-		description = "?"
-    }
-    
-    init(id: Int,lat: Double,lon: Double,type: Int,difficulty: Int,terrain: Int,size: Int,owner: Int,hint: String,description: String) {
-		self.id = id
-		self.lat = lat
-		self.lon = lon
-		self.type = type
-		self.difficulty = difficulty
-		self.terrain = terrain
-		self.size = size
-		self.owner = owner
-		self.hint = hint
-		self.description = description
-    }
-    
-    public var descriptor: String {
-        return "Cache(\(id),\(lat),\(lon),\(type)\(difficulty)\(terrain)\(size)\(owner)\(hint)\(description))"
-    }
-=======
 //
 //  Cache.swift
 //  ProjetIF26
@@ -55,7 +5,6 @@ public class Cache  {
 //  Created by Vincent on 09/01/2019.
 //  Copyright © 2019 GUILLOUX Valentin. All rights reserved.
 //
-
 class Cache {
     
     private var id: Int
@@ -68,7 +17,7 @@ class Cache {
     private var owner: Int
     private var hint: String
     private var description: String
-
+    
     init(id: Int, lat: Double, lon: Double, type: Int, difficulty: Int, terrain: Int, size: Int, owner: Int, hint: String, description: String) {
         self.id = id
         self.lat = lat
@@ -178,6 +127,5 @@ class Cache {
     func toString() -> String {
         return "Cache : id -> \(self.id) / lat -> \(self.lat) / lon -> \(self.lon)"
     }
-
->>>>>>> database
+    
 }
