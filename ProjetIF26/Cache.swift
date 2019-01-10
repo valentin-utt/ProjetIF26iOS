@@ -18,6 +18,19 @@ class Cache {
     private var owner: Int
     private var hint: String
     private var description: String
+
+    init(id: Int, lat: Double, lon: Double, type: Int, difficulty: Int, terrain: Int, size: Int, owner: Int, hint: String, description: String) {
+        self.id = id
+        self.lat = lat
+        self.lon = lon
+        self.type = type
+        self.difficulty = difficulty
+        self.terrain = terrain
+        self.size = size
+        self.owner = owner
+        self.hint = hint
+        self.description = description
+    }
     
     init(lat: Double, lon: Double, type: Int, difficulty: Int, terrain: Int, size: Int, owner: Int, hint: String, description: String) {
         self.id = -1
@@ -110,6 +123,10 @@ class Cache {
     
     func setDescription(description: String) {
         self.description = description
+    }
+    
+    func toString() -> String {
+        return "Cache : id -> \(self.id) / lat -> \(self.lat) / lon -> \(self.lon)"
     }
 
 }
