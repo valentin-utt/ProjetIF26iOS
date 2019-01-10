@@ -43,5 +43,19 @@ class UserDAO: DataBaseController {
         let user = self.getUser(query: query)
         return user
     }
+    
+    func getAllUser() -> Array<User> {
+        var users: [User] = []
+        
+        do {
+            for row in try super.database.prepare(super.user_table) {
+                let user: User = User(id: row[DataBaseController.user_id], email: row[DataBaseController.user_email], password: row[DataBaseController.user_password], userName: row[DataBaseController.user_name])
+                users.append(user)
+            }
+        } catch {
+            print("getAllUser failed : \(error)")
+        }
+        return users
+    }
 
 }
