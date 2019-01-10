@@ -17,6 +17,11 @@
 		BF1A376521E521B20054A691 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1A375721E520BF0054A691 /* SQLite.framework */; };
 		BF1A376621E522440054A691 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1A375721E520BF0054A691 /* SQLite.framework */; };
 		BF1A376721E522440054A691 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF1A375721E520BF0054A691 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF1A376C21E545A00054A691 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A376B21E545A00054A691 /* UserDAO.swift */; };
+		BF1A376E21E5474B0054A691 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A376D21E5474B0054A691 /* User.swift */; };
+		BF1A377021E62D060054A691 /* DataBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A376F21E62D060054A691 /* DataBaseController.swift */; };
+		BF1A377221E63E080054A691 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A377121E63E080054A691 /* Cache.swift */; };
+		BF1A377421E6742C0054A691 /* CacheDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A377321E6742C0054A691 /* CacheDAO.swift */; };
 		BF46D8E121C83DA9005EDD4B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46D8E021C83DA8005EDD4B /* MapViewController.swift */; };
 		BF812B8921C96D0B00979D6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF812B8821C96D0B00979D6F /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -123,6 +128,11 @@
 		2070BB5521B166070013FF4F /* ProjetIF26UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetIF26UITests.swift; sourceTree = "<group>"; };
 		2070BB5721B166070013FF4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF1A374C21E520BE0054A691 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite-2.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		BF1A376B21E545A00054A691 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		BF1A376D21E5474B0054A691 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BF1A376F21E62D060054A691 /* DataBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseController.swift; sourceTree = "<group>"; };
+		BF1A377121E63E080054A691 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		BF1A377321E6742C0054A691 /* CacheDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheDAO.swift; sourceTree = "<group>"; };
 		BF46D8E021C83DA8005EDD4B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BF812B8821C96D0B00979D6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +197,11 @@
 				2070BB4121B166070013FF4F /* Info.plist */,
 				BF46D8E021C83DA8005EDD4B /* MapViewController.swift */,
 				BF812B8821C96D0B00979D6F /* LoginViewController.swift */,
+				BF1A376B21E545A00054A691 /* UserDAO.swift */,
+				BF1A376D21E5474B0054A691 /* User.swift */,
+				BF1A376F21E62D060054A691 /* DataBaseController.swift */,
+				BF1A377121E63E080054A691 /* Cache.swift */,
+				BF1A377321E6742C0054A691 /* CacheDAO.swift */,
 			);
 			path = ProjetIF26;
 			sourceTree = "<group>";
@@ -423,7 +438,12 @@
 			files = (
 				BF812B8921C96D0B00979D6F /* LoginViewController.swift in Sources */,
 				2070BB3821B166010013FF4F /* ViewController.swift in Sources */,
+				BF1A377221E63E080054A691 /* Cache.swift in Sources */,
+				BF1A376E21E5474B0054A691 /* User.swift in Sources */,
 				BF46D8E121C83DA9005EDD4B /* MapViewController.swift in Sources */,
+				BF1A376C21E545A00054A691 /* UserDAO.swift in Sources */,
+				BF1A377421E6742C0054A691 /* CacheDAO.swift in Sources */,
+				BF1A377021E62D060054A691 /* DataBaseController.swift in Sources */,
 				2070BB3621B166010013FF4F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
