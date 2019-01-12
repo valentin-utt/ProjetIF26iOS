@@ -33,11 +33,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         checkLocationAuthorizationStatus()
     }
     
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
-        
-        let CacheView = CacheTableViewController()
-        navigationController?.pushViewController(CacheView , animated: true)
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +93,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
     }
     
+    var selectedAnnotation: MKAnnotation!
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        selectedAnnotation = view.annotation
+        self.performSegue(withIdentifier: "annotation", sender: nil)
+    }
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
     {
         print("Error \(error)")
@@ -107,6 +111,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             let vc = segue.destination as? AddCacheViewController
             vc?.lat = userLocation.coordinate.latitude
             vc?.lon = userLocation.coordinate.longitude
+        }
+        if segue.identifier == "annotation" {
+            let cacheTVC = segue.destination as! CacheTableViewController
+            cacheTVC.annotation = (selectedAnnotation as! CacheAnnotation)
+            //cacheTVC = selectedAnnotation as! CacheAnnotation
         }
     }
     

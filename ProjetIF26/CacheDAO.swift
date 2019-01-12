@@ -43,6 +43,16 @@ class CacheDAO: DataBaseController {
         return cache
     }
     
+    func deleteCacheById(id: Int)  {
+        let query = super.cache_table.filter(DataBaseController.cache_id == id)
+        do {
+            try  super.database.run(query.delete())
+        } catch {
+            print("delete cache failed : \(error)")
+        }
+        
+    }
+    
     func getAllCache() -> Array<Cache> {
         var caches: [Cache] = []
         

@@ -15,7 +15,7 @@ class CacheAnnotationView: MKMarkerAnnotationView {
             guard let cacheAnnot = newValue as? CacheAnnotation else { return }
             // 2
             markerTintColor = cacheAnnot.markerTintColor
-            glyphText = String("Cache")
+            glyphText = String(" ")
         }
     }
 }
