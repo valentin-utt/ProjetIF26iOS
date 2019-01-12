@@ -184,6 +184,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ajouter"/>
                                 <connections>
+                                    <action selector="ajoutCache" destination="ChW-Jo-a4M" eventType="touchUpInside" id="JqV-Eh-cF1"/>
                                     <segue destination="42u-Ah-6db" kind="show" id="FPq-sn-tuE"/>
                                 </connections>
                             </button>
@@ -218,9 +219,12 @@
                         <viewLayoutGuide key="safeArea" id="YtR-gs-9VC"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionTextField" destination="vak-36-PfE" id="SBC-Go-6RY"/>
+                        <outlet property="indiceTextField" destination="jWu-bu-4OY" id="ULF-oh-f1c"/>
                         <outlet property="pickerDifficulty" destination="BNy-oc-jKa" id="48n-tp-XUi"/>
                         <outlet property="pickerTerrain" destination="0Cb-1i-LaT" id="vUh-27-qqU"/>
                         <outlet property="pickerType" destination="hOm-ib-jr6" id="TkB-61-swj"/>
+                        <outlet property="tailleTextField" destination="aCj-6o-uK8" id="ooP-bB-9bx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPy-Km-Kam" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,6 +233,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="MOg-5K-Ind"/>
         <segue reference="FPq-sn-tuE"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -125,7 +125,7 @@ class Cache {
     }
     
     func toString() -> String {
-        return "Cache : id -> \(self.id) / lat -> \(self.lat) / lon -> \(self.lon)"
+        return "Cache : id -> \(self.id) / lat -> \(self.lat) / lon -> \(self.lon) / type -> \(self.type) / difficulté -> \(self.difficulty) / terrain -> \(self.terrain) / taille -> \(self.size) / owner -> \(self.owner) / hint -> \(self.hint) / description -> \(self.description)"
     }
     
 }
