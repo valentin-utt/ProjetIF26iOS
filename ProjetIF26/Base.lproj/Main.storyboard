@@ -181,30 +181,23 @@
             </objects>
             <point key="canvasLocation" x="1157.5999999999999" y="483.50824587706148"/>
         </scene>
+<<<<<<< HEAD
         <!--Cache View Controller-->
         <scene sceneID="xC5-Xm-4dd">
             <objects>
                 <viewController id="ChW-Jo-a4M" customClass="CacheViewController" sceneMemberID="viewController">
+=======
+        <!--Add Cache View Controller-->
+        <scene sceneID="xC5-Xm-4dd">
+            <objects>
+                <viewController id="ChW-Jo-a4M" customClass="AddCacheViewController" customModule="ProjetIF26" customModuleProvider="target" sceneMemberID="viewController">
+>>>>>>> abfdd9a211c2e3395c9016a07c05339ac1c4a1e5
                     <view key="view" contentMode="scaleToFill" id="XIQ-FD-lrO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Difficulté" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee4-wV-dFh">
-                                <rect key="frame" x="16" y="87" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnQ-2k-AIt">
-                                <rect key="frame" x="16" y="175" width="38" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terrain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-Lz-3AH">
-                                <rect key="frame" x="16" y="287" width="53" height="21"/>
+                                <rect key="frame" x="8" y="323" width="53" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -217,15 +210,15 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Indice" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jWu-bu-4OY">
-                                <rect key="frame" x="16" y="507" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Indice" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="jWu-bu-4OY">
+                                <rect key="frame" x="16" y="507" width="304" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Description" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vak-36-PfE">
-                                <rect key="frame" x="16" y="561" width="97" height="30"/>
+                                <rect key="frame" x="16" y="561" width="304" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
@@ -236,20 +229,56 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ajouter"/>
                                 <connections>
+                                    <action selector="ajoutCache" destination="ChW-Jo-a4M" eventType="touchUpInside" id="JqV-Eh-cF1"/>
                                     <segue destination="42u-Ah-6db" kind="show" id="FPq-sn-tuE"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Cb-1i-LaT">
+                                <rect key="frame" x="8" y="346" width="173" height="90"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Difficulté" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee4-wV-dFh">
+                                <rect key="frame" x="24" y="86" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnQ-2k-AIt">
+                                <rect key="frame" x="24" y="211" width="38" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNy-oc-jKa">
+                                <rect key="frame" x="8" y="113" width="173" height="90"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hOm-ib-jr6">
+                                <rect key="frame" x="8" y="225" width="173" height="90"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YtR-gs-9VC"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="vak-36-PfE" id="SBC-Go-6RY"/>
+                        <outlet property="indiceTextField" destination="jWu-bu-4OY" id="ULF-oh-f1c"/>
+                        <outlet property="pickerDifficulty" destination="BNy-oc-jKa" id="48n-tp-XUi"/>
+                        <outlet property="pickerTerrain" destination="0Cb-1i-LaT" id="vUh-27-qqU"/>
+                        <outlet property="pickerType" destination="hOm-ib-jr6" id="TkB-61-swj"/>
+                        <outlet property="tailleTextField" destination="aCj-6o-uK8" id="ooP-bB-9bx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPy-Km-Kam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1942" y="481"/>
+            <point key="canvasLocation" x="1941.5999999999999" y="480.80959520239884"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="MOg-5K-Ind"/>
         <segue reference="FPq-sn-tuE"/>
     </inferredMetricsTieBreakers>
 </document>
