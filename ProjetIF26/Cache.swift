@@ -5,6 +5,8 @@
 //  Created by Vincent on 09/01/2019.
 //  Copyright © 2019 GUILLOUX Valentin. All rights reserved.
 //
+
+
 class Cache {
     
     private var id: Int
