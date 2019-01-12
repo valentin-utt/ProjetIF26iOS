@@ -181,17 +181,11 @@
             </objects>
             <point key="canvasLocation" x="1157.5999999999999" y="483.50824587706148"/>
         </scene>
-<<<<<<< HEAD
-        <!--Cache View Controller-->
-        <scene sceneID="xC5-Xm-4dd">
-            <objects>
-                <viewController id="ChW-Jo-a4M" customClass="CacheViewController" sceneMemberID="viewController">
-=======
+
         <!--Add Cache View Controller-->
         <scene sceneID="xC5-Xm-4dd">
             <objects>
                 <viewController id="ChW-Jo-a4M" customClass="AddCacheViewController" customModule="ProjetIF26" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> abfdd9a211c2e3395c9016a07c05339ac1c4a1e5
                     <view key="view" contentMode="scaleToFill" id="XIQ-FD-lrO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
