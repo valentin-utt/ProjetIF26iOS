@@ -20,6 +20,7 @@
 		AC38BB5921E951A8002DE4F6 /* CacheAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38BB5821E951A8002DE4F6 /* CacheAnnotationView.swift */; };
 		AC38BB5B21E9644F002DE4F6 /* CacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38BB5A21E9644F002DE4F6 /* CacheViewController.swift */; };
 		AC38BB5D21EA2FEB002DE4F6 /* CacheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38BB5C21EA2FEB002DE4F6 /* CacheTableViewController.swift */; };
+		ACEA3BB321EAA86600D8F035 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA3BB221EAA86600D8F035 /* FilterViewController.swift */; };
 		BF1A376C21E545A00054A691 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A376B21E545A00054A691 /* UserDAO.swift */; };
 		BF1A376E21E5474B0054A691 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A376D21E5474B0054A691 /* User.swift */; };
 		BF1A377021E62D060054A691 /* DataBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A376F21E62D060054A691 /* DataBaseController.swift */; };
@@ -137,6 +138,7 @@
 		AC38BB5821E951A8002DE4F6 /* CacheAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAnnotationView.swift; sourceTree = "<group>"; };
 		AC38BB5A21E9644F002DE4F6 /* CacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheViewController.swift; sourceTree = "<group>"; };
 		AC38BB5C21EA2FEB002DE4F6 /* CacheTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTableViewController.swift; sourceTree = "<group>"; };
+		ACEA3BB221EAA86600D8F035 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		BF1A376B21E545A00054A691 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
 		BF1A376D21E5474B0054A691 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF1A376F21E62D060054A691 /* DataBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				2070BB3521B166010013FF4F /* AppDelegate.swift */,
 				2070BB3721B166010013FF4F /* ViewController.swift */,
 				2070BB3921B166010013FF4F /* Main.storyboard */,
+				ACEA3BB221EAA86600D8F035 /* FilterViewController.swift */,
 				2070BB3C21B166070013FF4F /* Assets.xcassets */,
 				2070BB3E21B166070013FF4F /* LaunchScreen.storyboard */,
 				2070BB4121B166070013FF4F /* Info.plist */,
@@ -462,6 +465,7 @@
 				BF1A376C21E545A00054A691 /* UserDAO.swift in Sources */,
 				AC38BB5D21EA2FEB002DE4F6 /* CacheTableViewController.swift in Sources */,
 				AC38BB5921E951A8002DE4F6 /* CacheAnnotationView.swift in Sources */,
+				ACEA3BB321EAA86600D8F035 /* FilterViewController.swift in Sources */,
 				AC38BB5B21E9644F002DE4F6 /* CacheViewController.swift in Sources */,
 				BF1A377421E6742C0054A691 /* CacheDAO.swift in Sources */,
 				AC38BB5721E947C1002DE4F6 /* CacheAnnotation.swift in Sources */,
