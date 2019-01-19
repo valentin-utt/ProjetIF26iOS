@@ -31,9 +31,9 @@ class CacheTableViewController: UITableViewController {
             case 1:
                 return "Difficulté"
             case 2:
-                return "Terrain"
-            case 3:
                 return "Type"
+            case 3:
+                return "Terrain"
             case 4:
                 return "Taille"
             case 5:

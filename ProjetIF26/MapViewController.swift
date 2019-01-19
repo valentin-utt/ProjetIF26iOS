@@ -15,6 +15,7 @@ import CoreLocation
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var ajoutCacheButton: UIButton!
     
     var locationManager = CLLocationManager()
     var userLocation:CLLocation = CLLocation()
@@ -44,7 +45,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.register(CacheAnnotationView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
-        
+        if UserDefaults.standard.bool(forKey: "isConnected") == false {
+            self.ajoutCacheButton.isHidden = true
+        }
 
         //let userLocation:CLLocation = CLLocation(latitude: 48.269126, longitude: 4.066722)
         //let coordinateRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, regionRadius, regionRadius)
@@ -65,27 +68,27 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         print("typeBool1: \(typeBool)")
         var type1 = 1
         if typeBool {
-            type1 = -1
-        } else {
             type1 = 1
+        } else {
+            type1 = -1
         }
         print("type1: \(type1)")
         typeBool = UserDefaults.standard.bool(forKey: "FilterType2")
         print("typeBool2: \(typeBool)")
         var type2 = 2
         if typeBool {
-            type2 = -1
-        } else {
             type2 = 2
+        } else {
+            type2 = -1
         }
         print("type2: \(type2)")
         typeBool = UserDefaults.standard.bool(forKey: "FilterType3")
         print("typeBool3: \(typeBool)")
         var type3 = 3
         if typeBool {
-            type3 = -1
-        } else {
             type3 = 3
+        } else {
+            type3 = -1
         }
         print("type3: \(type3)")
         

@@ -20,11 +20,11 @@ class FilterViewController: UIViewController {
  
     @IBAction func type1ChangedValue(_ sender: UISwitch) {
         if (sender.isOn){
-            UserDefaults.standard.set(false, forKey: "FilterType1")
+            UserDefaults.standard.set(true, forKey: "FilterType1")
             print(UserDefaults.standard.bool(forKey: "FilterType1"))
         }
         else{
-            UserDefaults.standard.set(true, forKey: "FilterType1")
+            UserDefaults.standard.set(false, forKey: "FilterType1")
             print(UserDefaults.standard.bool(forKey: "FilterType1"))
         }
     }
@@ -32,11 +32,11 @@ class FilterViewController: UIViewController {
     
     @IBAction func type2ChangedValue(_ sender: UISwitch) {
         if (sender.isOn){
-            UserDefaults.standard.set(false, forKey: "FilterType2")
+            UserDefaults.standard.set(true, forKey: "FilterType2")
             print(UserDefaults.standard.bool(forKey: "FilterType2"))
         }
         else{
-            UserDefaults.standard.set(true, forKey: "FilterType2")
+            UserDefaults.standard.set(false, forKey: "FilterType2")
             print(UserDefaults.standard.bool(forKey: "FilterType2"))
         }
     }
@@ -46,11 +46,11 @@ class FilterViewController: UIViewController {
     
     @IBAction func switch3changeValue(_ sender: UISwitch) {
         if (sender.isOn){
-            UserDefaults.standard.set(false, forKey: "FilterType3")
+            UserDefaults.standard.set(true, forKey: "FilterType3")
             print(UserDefaults.standard.bool(forKey: "FilterType3"))
         }
         else{
-            UserDefaults.standard.set(true, forKey: "FilterType3")
+            UserDefaults.standard.set(false, forKey: "FilterType3")
             print(UserDefaults.standard.bool(forKey: "FilterType3"))
         }
     }
@@ -59,9 +59,11 @@ class FilterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        print("users bool: \(UserDefaults.standard.bool(forKey: "FilterType1")) \(UserDefaults.standard.bool(forKey: "FilterType2")) \(UserDefaults.standard.bool(forKey: "FilterType3"))")
         self.switchType1.setOn(UserDefaults.standard.bool(forKey: "FilterType1"), animated: false)
         self.switchType2.setOn(UserDefaults.standard.bool(forKey: "FilterType2"), animated: false)
         self.switchType3.setOn(UserDefaults.standard.bool(forKey: "FilterType3"), animated: false)
