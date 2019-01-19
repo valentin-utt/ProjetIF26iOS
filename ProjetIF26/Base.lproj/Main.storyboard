@@ -46,15 +46,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="78y-CU-z2N"/>
+                    <connections>
+                        <outlet property="ConnectionButton" destination="Ff7-11-eUg" id="ggO-An-NFi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Tcb-QU-U42">
             <objects>
-                <viewController id="0RO-UA-NN9" sceneMemberID="viewController">
+                <viewController id="0RO-UA-NN9" customClass="LoginViewController" customModule="ProjetIF26" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fpy-u0-QJk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,16 +80,30 @@
                                 <rect key="frame" x="67" y="377" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Se connecter"/>
+                                <connections>
+                                    <action selector="ConnectAction:" destination="0RO-UA-NN9" eventType="touchUpInside" id="zQC-eb-ZTQ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="connect" id="wFg-IO-rrZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HO-pH-ZP2">
                                 <rect key="frame" x="242" y="377" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="S'inscrire"/>
+                                <connections>
+                                    <action selector="SignInAction:" destination="0RO-UA-NN9" eventType="touchUpInside" id="tqZ-0f-ZtW"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="register" id="D4X-bS-XyO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pJN-zy-PEO"/>
                     </view>
+                    <connections>
+                        <outlet property="Connect" destination="P40-ra-3Wh" id="0ny-pW-9n3"/>
+                        <outlet property="PasswordTextField" destination="700-gh-dVK" id="FD0-IX-GNL"/>
+                        <outlet property="SignIn" destination="1HO-pH-ZP2" id="UEf-Ic-nuC"/>
+                        <outlet property="UserNameTextField" destination="mZR-OE-g8S" id="qqZ-Cv-wCe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVi-K7-CXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -359,6 +376,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="BB4-NL-0Xk"/>
         <segue reference="stA-en-qnO"/>
+        <segue reference="D4X-bS-XyO"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,9 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+   
+    @IBOutlet weak var ConnectionButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let isConnected = UserDefaults.standard.bool(forKey: "isConnected") ?? false
+        if(isConnected){
+            ConnectionButton.setTitle("Déconnection", for: .normal)
+        }else{
+            ConnectionButton.setTitle("Se connecter ou s'inscrire", for: .normal)
+        }
+        
         
         //Tests Base User
         let userDAO:UserDAO = UserDAO()
