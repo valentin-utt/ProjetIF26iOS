@@ -31,6 +31,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         checkLocationAuthorizationStatus()
+        
+        
     }
     
 
@@ -41,13 +43,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.delegate=self
         mapView.register(CacheAnnotationView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        let cacheDAO:CacheDAO = CacheDAO()
-        let cacheTable = cacheDAO.getAllCache()
-        
-        for cache in cacheTable {
-            let addedCacheAnnotation = CacheAnnotation( id: cache.getId(), type: cache.getType(), coordinate: CLLocationCoordinate2D(latitude: cache.getLat(),longitude: cache.getLon()) )
-            mapView.addAnnotation(addedCacheAnnotation)
-        }
         
         
 
@@ -61,6 +56,46 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         super.viewWillAppear(animated)
         
         determineMyCurrentLocation()
+        
+        mapView.removeAnnotations(mapView.annotations)
+        
+        let cacheDAO:CacheDAO = CacheDAO()
+        //let cacheTable = cacheDAO.getAllCache()
+        var typeBool = UserDefaults.standard.bool(forKey: "FilterType1")
+        print("typeBool1: \(typeBool)")
+        var type1 = 1
+        if typeBool {
+            type1 = -1
+        } else {
+            type1 = 1
+        }
+        print("type1: \(type1)")
+        typeBool = UserDefaults.standard.bool(forKey: "FilterType2")
+        print("typeBool2: \(typeBool)")
+        var type2 = 2
+        if typeBool {
+            type2 = -1
+        } else {
+            type2 = 2
+        }
+        print("type2: \(type2)")
+        typeBool = UserDefaults.standard.bool(forKey: "FilterType3")
+        print("typeBool3: \(typeBool)")
+        var type3 = 3
+        if typeBool {
+            type3 = -1
+        } else {
+            type3 = 3
+        }
+        print("type3: \(type3)")
+        
+        let cacheTable = cacheDAO.getCacheTri(type1: type1, type2: type2, type3: type3)
+        
+        for cache in cacheTable {
+            let addedCacheAnnotation = CacheAnnotation( id: cache.getId(), type: cache.getType(), coordinate: CLLocationCoordinate2D(latitude: cache.getLat(),longitude: cache.getLon()) )
+            mapView.addAnnotation(addedCacheAnnotation)
+        }
+        
     }
     
     

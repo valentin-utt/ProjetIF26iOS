@@ -46,12 +46,12 @@ class FilterViewController: UIViewController {
     
     @IBAction func switch3changeValue(_ sender: UISwitch) {
         if (sender.isOn){
-            UserDefaults.standard.set(false, forKey: "FilterType2")
-            print(UserDefaults.standard.bool(forKey: "FilterType2"))
+            UserDefaults.standard.set(false, forKey: "FilterType3")
+            print(UserDefaults.standard.bool(forKey: "FilterType3"))
         }
         else{
-            UserDefaults.standard.set(true, forKey: "FilterType2")
-            print(UserDefaults.standard.bool(forKey: "FilterType2"))
+            UserDefaults.standard.set(true, forKey: "FilterType3")
+            print(UserDefaults.standard.bool(forKey: "FilterType3"))
         }
     }
     
@@ -61,6 +61,11 @@ class FilterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.switchType1.setOn(UserDefaults.standard.bool(forKey: "FilterType1"), animated: false)
+        self.switchType2.setOn(UserDefaults.standard.bool(forKey: "FilterType2"), animated: false)
+        self.switchType3.setOn(UserDefaults.standard.bool(forKey: "FilterType3"), animated: false)
+    }
 
     /*
     // MARK: - Navigation

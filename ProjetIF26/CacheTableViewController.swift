@@ -99,7 +99,7 @@ class CacheTableViewController: UITableViewController {
                     cell.textLabel?.text = "Default"
                 }
         case 4:
-            cell.textLabel?.text = "\(viewedCache?.getSize() ?? 0))"
+            cell.textLabel?.text = "\(viewedCache?.getSize() ?? 0)"
         case 5:
             cell.textLabel?.text = "\(viewedCache?.getHint() ?? "none")"
         case 6:

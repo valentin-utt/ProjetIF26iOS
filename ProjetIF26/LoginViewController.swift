@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         for user in userTable {
             if (user.getEmail() ==  UserNameTextField.text){
                 bool = true
-                let dialogMessage = UIAlertController(title: "Error", message: "L'utilisateur existe déjà", preferredStyle: .alert)
+                let dialogMessage = UIAlertController(title: "Erreur", message: "L'utilisateur existe déjà", preferredStyle: .alert)
                 // Create OK button with action handler
                 let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
                     
@@ -120,7 +120,7 @@ class LoginViewController: UIViewController {
         PasswordTextField.text = ""
         UserNameTextField.text = ""
         
-
+        PasswordTextField.isSecureTextEntry = true
         
         
         

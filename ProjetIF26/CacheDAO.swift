@@ -66,4 +66,21 @@ class CacheDAO: DataBaseController {
         }
         return caches
     }
+    
+    func getCacheTri(type1: Int, type2: Int, type3: Int) -> Array<Cache> {
+        var caches: [Cache] = []
+        print("types: \(type1) \(type2) \(type3)")
+        do {
+            for row in try super.database.prepare(super.cache_table.filter(DataBaseController.cache_type == type1 || DataBaseController.cache_type == type2 || DataBaseController.cache_type == type3)) {
+                
+                let cache: Cache = Cache.init(id: row[DataBaseController.cache_id], lat: row[DataBaseController.cache_lat], lon: row[DataBaseController.cache_lon], type: row[DataBaseController.cache_type], difficulty: row[DataBaseController.cache_difficulty], terrain: row[DataBaseController.cache_terrain], size: row[DataBaseController.cache_size], owner: row[DataBaseController.cache_owner], hint: row[DataBaseController.cache_hint], description: row[DataBaseController.cache_description])
+                caches.append(cache)
+                print("cache: \(cache.toString())")
+            }
+        } catch {
+            print("getCacheTri failed : \(error)")
+        }
+        return caches
+        
+    }
 }

@@ -21,6 +21,7 @@ class AddCacheViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
     var cache:Cache = Cache(lat: 0, lon: 0, type: 1, difficulty: 1, terrain: 1, size: 1, owner: 1, hint: "", description: "")
     let cacheDAO:CacheDAO = CacheDAO()
+    let userDAO:UserDAO = UserDAO()
     
     var lat:Double = 0
     var lon:Double = 0
@@ -48,6 +49,8 @@ class AddCacheViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         cache.setLat(lat: lat)
         cache.setLon(lon: lon)
         
+        let userID = UserDefaults.standard.integer(forKey: "ConnectedUserID")
+        cache.setOwner(owner: userID)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
