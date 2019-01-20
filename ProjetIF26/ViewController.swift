@@ -36,8 +36,13 @@ class ViewController: UIViewController {
         let cache1: Cache = Cache(lat: 48.26881, lon: 4.066998, type: 1, difficulty: 2, terrain: 1, size: 1, owner: 1, hint: "h1", description: "d1")
         let cache2: Cache = Cache(lat: 48.268, lon: 4.06, type: 2, difficulty: 2, terrain: 2, size: 2, owner: 1, hint: "h2", description: "d2s")
         
-        cacheDAO.insert(cache: cache1)
-        cacheDAO.insert(cache: cache2)
+        
+        if(UserDefaults.standard.bool(forKey: "firstRun")==false){
+            cacheDAO.insert(cache: cache1)
+            cacheDAO.insert(cache: cache2)
+            UserDefaults.standard.set(true, forKey: "firstRun")
+        }
+        
         
         let arrayCache = cacheDAO.getAllCache()
         for cache in arrayCache {

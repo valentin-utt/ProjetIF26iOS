@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ff7-11-eUg">
-                                <rect key="frame" x="148" y="295" width="79" height="30"/>
+                                <rect key="frame" x="30" y="295" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Connection"/>
                                 <connections>
@@ -121,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVi-K7-CXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1154.4000000000001" y="-242.42878560719643"/>
+            <point key="canvasLocation" x="134" y="-590"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mNK-l8-WbU">
@@ -183,7 +183,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVa-ub-NDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="1303"/>
+            <point key="canvasLocation" x="1788" y="-591"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="cAG-Gv-yoe">
@@ -235,7 +235,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2D-Yd-2GQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="ZYI-qv-fr9"/>
             </objects>
-            <point key="canvasLocation" x="997.60000000000002" y="592.35382308845578"/>
+            <point key="canvasLocation" x="940" y="134"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="Hpr-tJ-k6u">
@@ -299,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgc-pc-MPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1697" y="1303"/>
+            <point key="canvasLocation" x="1788" y="134"/>
         </scene>
         <!--Add Cache View Controller-->
         <scene sceneID="xC5-Xm-4dd">
@@ -387,12 +387,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPy-Km-Kam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1941.5999999999999" y="480.80959520239884"/>
+            <point key="canvasLocation" x="940" y="-591"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MOg-5K-Ind"/>
-        <segue reference="FPq-sn-tuE"/>
+        <segue reference="BB4-NL-0Xk"/>
+        <segue reference="stA-en-qnO"/>
         <segue reference="D4X-bS-XyO"/>
     </inferredMetricsTieBreakers>
 </document>

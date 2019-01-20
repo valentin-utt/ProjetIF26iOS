@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>test 1</string>
+	<string>Pour ajouter des caches a votre position</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Pour ajouter des caches a votre position</string>
 	<key>CFBundleDevelopmentRegion</key>
