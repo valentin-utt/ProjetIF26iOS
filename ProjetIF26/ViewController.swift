@@ -40,6 +40,19 @@ class ViewController: UIViewController {
         if(UserDefaults.standard.bool(forKey: "firstRun")==false){
             cacheDAO.insert(cache: cache1)
             cacheDAO.insert(cache: cache2)
+            let dialogMessage = UIAlertController(title: "Consentement", message: "Par l'utilisation de cette application, vous pouvez consentir que des informations à caractère personnel et de géolocalisation peuvent être recueillies dans le cadre de la présente application, sous la responsabilité de Chasse au trésor SAS. Elles ne sont pas destinées à être utilisées à des fins commerciales. Conformément à la réglementation applicable, notamment le Règlement européen 2016/679, dit règlement général sur la protection des données (RGPD) et les dispositions nationales relatives à l\'informatique, aux fichiers et libertés, les personnes dont les données à caractère personnel sont collectées bénéficient d\'un droit d\'accès, de rectification, de suppression et d\'opposition, pour motifs légitimes, aux informations les concernant. Ces droits peuvent être exercés par l’envoi d’un email, à juridique@chasse_au_trésor.fr. Enfin, les personnes disposent du droit d’introduire une réclamation auprès de la Commission Nationale de l’Informatique et des Libertés (CNIL).", preferredStyle: .alert)
+            // Create OK button with action handler
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                
+            })
+            let non = UIAlertAction(title: "NON", style: .default, handler: { (action) -> Void in
+                
+            })
+            dialogMessage.addAction(ok)
+            dialogMessage.addAction(non)
+            self.present(dialogMessage, animated: true, completion: nil)
+            
+            
             UserDefaults.standard.set(true, forKey: "firstRun")
         }
         
